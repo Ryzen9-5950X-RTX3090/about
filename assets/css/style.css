@@ -19,14 +19,14 @@ body {
 }
 
 a {
-  color: #2dc997;
+  color: #727272;
   text-decoration: none;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #2dca98;
+  color: #bebebe;
   outline: none;
   text-decoration: none;
 }
