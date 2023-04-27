@@ -7,12 +7,10 @@ body {
   text-align: center;
   font-family: Trebuchet MS;
 }
-
 a {
   color: #727272;
   text-decoration: none;
 }
-
 a:hover,
 a:active,
 a:focus {
@@ -20,14 +18,12 @@ a:focus {
   outline: none;
   text-decoration: none;
 }
-
 h1 {
   font-family: Trebuchet MS;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
 }
-
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
 --------------------------------------------------------------*/
@@ -36,7 +32,6 @@ h1 {
     transition-delay: 0 !important;
   }
 }
-
 /*--------------------------------------------------------------
 # Title Section
 --------------------------------------------------------------*/
@@ -47,13 +42,11 @@ h1 {
   background-size: cover;
   position: relative;
 }
-
 @media (min-width: 1024px) {
   #title {
     background-attachment: fixed;
   }
 }
-
 #title .title-container {
   position: absolute;
   bottom: 0;
@@ -66,7 +59,6 @@ h1 {
   flex-direction: column;
   text-align: center;
 }
-
 #title h1 {
   margin: 30px 0 10px 0;
   font-size: 48px;
@@ -75,14 +67,12 @@ h1 {
   text-transform: uppercase;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   #title h1 {
     font-size: 28px;
     line-height: 36px;
   }
 }
-
 @media (max-width: 768px) {
   #title h2 {
     font-size: 18px;
@@ -90,14 +80,12 @@ h1 {
     margin-bottom: 30px;
   }
 }
-
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 section {
   overflow: hidden;
 }
-
 /* Sections Header
 --------------------------------*/
 .section-header .section-title {
@@ -108,7 +96,6 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
 }
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -118,56 +105,45 @@ section {
   color: #fff;
   font-size: 14px;
 }
-
 #footer .copyright {
   text-align: center;
 }
-
 #footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
   color: #ccc;
 }
-
 /*--------------------------------------------------------------
 # Extra coding
 --------------------------------------------------------------*/
-
 strong {
   color: #727272;
 }
-
 strong2 {
   color: white;
 }
-
 body::-webkit-scrollbar {
   width: 12px;
 }
-
 body::-webkit-scrollbar-track {
   background: #000000;
   border-radius: 6px;
 }
-
 body::-webkit-scrollbar-thumb {
   background: #727272;
   border-radius: 6px;
 }
-
-.center1 {
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 200%;
 }
-
 body {
     font-family: 'Trebuchet MS';font-size: 30px;
 }
-
 .transparent {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
