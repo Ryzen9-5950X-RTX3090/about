@@ -29,9 +29,6 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
    * Event will be fired when slide changed with autoplay
    */
   autoplay: CustomEvent<[swiper: Swiper]>;/**
-   * Event will be fired on key press
-   */
-  keypress: CustomEvent<[swiper: Swiper, keyCode: string]>;/**
    * Event will be fired on window hash change
    */
   hashchange: CustomEvent<[swiper: Swiper]>;
@@ -57,6 +54,9 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
    * Event will be fired on navigation next button click
    */
   navigationnext: CustomEvent<[swiper: Swiper]>;/**
+   * Event will be fired on key press
+   */
+  keypress: CustomEvent<[swiper: Swiper, keyCode: string]>;/**
    * Event will be fired after pagination rendered
    */
   paginationrender: CustomEvent<[swiper: Swiper, paginationEl: HTMLElement]>;
