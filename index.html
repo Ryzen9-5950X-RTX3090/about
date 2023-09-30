@@ -1,10 +1,10 @@
 
 
 <!--- File name: index.html
-	  Last updated: September 23, 2023. 
-	  Revision: 97
-	  Version: 2.0
-	  Codename: V2StablePreV3Release
+	  Last updated: October 1, 2023. 
+	  Revision: 98
+	  Version: 3.0
+	  Codename: V3Stable
 	  Version 1 development start date: May 1, 2022.
 	  Version 1 development end date: July 4, 2022.
 	  Version 1 release date: September 18, 2022.
@@ -27,13 +27,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
+  
+  <!-- Google Play Store Verification -->
   <meta name="google-site-verification" content="1jYxsAliJC0TUXSr51EhcLScD_FJ560WgEmX70Ggc4g" />
 
-<!-- Website title, author, and description -->
+  <!-- Website title, author, and description -->
   <meta name="author" content="Ryzen5-3600">
   <title>Ryzen5-3600: About me</title>
-  <meta content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services and Ryzen5-3600's free services are open source." name="description">
-  <meta content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services and Ryzen5-3600's free services are open source." name="keywords">
+  <meta content="Ryzen5-3600's services and projects are always open source." name="description">
+  <meta content="Ryzen5-3600's services and projects are always open source." name="keywords">
 
   <!-- Favicon -->
   <link href="images/logo/icon.png" rel="icon">
@@ -47,6 +49,13 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+
+  <!-- Background audio -->
+  <audio id="audio" autoplay loop>
+  <source src="music/halloween.ogg" type="audio/ogg">
+  <source src="music/halloween.mp3" type="audio/mpeg">
+  Error! Your browser does not support audio playback. Please upgrade to a newer version or switch to a different browser that supports audio playback.
+  </audio>
 
 <body>
 
@@ -109,6 +118,20 @@
 	
 	<br>
 	<hr>
+	<br
+	<!-- ======= Background audio mute ======= -->
+    <section id="mute">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title"><strong2>Play and mute the website's background audio:</strong2></h3>
+		  <br>
+    <img src="assets/img/Resume.png" class="center1" onclick="document.getElementById('audio').play()" />
+	<br>
+	<img src="assets/img/Pause.png" class="center1" onclick="document.getElementById('audio').pause()" />
+        </div>
+      </div>
+    </section><!-- End mute -->
+	<hr>
 
   </main><!-- End main -->
 
@@ -137,7 +160,7 @@
 		<br><br>
 		&
 		<br><br>
-		Swiper JS version: 10.2.0
+		Swiper JS version: 10.3.1
 				
       </div>
     </div>
