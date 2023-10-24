@@ -1,9 +1,9 @@
 
 
 <!--- File name: index.html
-	  Last updated: October 1, 2023. 
-	  Revision: 98
-	  Version: 3.0
+	  Last updated: October 24, 2023. 
+	  Revision: 99
+	  Version: 3.1.0
 	  Codename: V3Stable
 	  Version 1 development start date: May 1, 2022.
 	  Version 1 development end date: July 4, 2022.
@@ -15,7 +15,7 @@
 	  Version 3 announcement date: July 19, 2023.
       Version 3 development start date: June 1, 2023.
       Version 3 development end date: September 29, 2023.
-	  Version 3 full public release date: September 30, 2023.	  -->
+	  Version 3 full public release date: September 30, 2023. -->
 
 
 <!DOCTYPE html>
@@ -24,9 +24,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script src="assets/vendor/jquery/jquery.js"></script>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
+  <meta name="viewport" id="metaViewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
   
   <!-- Google Play Store Verification -->
   <meta name="google-site-verification" content="1jYxsAliJC0TUXSr51EhcLScD_FJ560WgEmX70Ggc4g" />
@@ -47,6 +49,11 @@
 
   <!-- CSS File for styling -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <script>
+    if(navigator.userAgent.toLowerCase().indexOf('android') > -1)
+    document.getElementById('metaViewport').setAttribute('content', 'width='+screen.width+', initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+  </script>
 
 </head>
 
@@ -160,7 +167,7 @@
 		<br><br>
 		&
 		<br><br>
-		Swiper JS version: 10.3.1
+		Swiper JS version: 11.0.0
 				
       </div>
     </div>
