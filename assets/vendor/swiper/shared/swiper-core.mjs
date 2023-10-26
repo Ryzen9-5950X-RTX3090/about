@@ -1899,7 +1899,8 @@ function loopFix(_temp) {
   if (loopedSlides % slidesPerGroup !== 0) {
     loopedSlides += slidesPerGroup - loopedSlides % slidesPerGroup;
   }
-  swiper.loopedSlides = loopedSlides + params.loopAdditionalSlides;
+  loopedSlides += params.loopAdditionalSlides;
+  swiper.loopedSlides = loopedSlides;
   const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
   if (slides.length < slidesPerView + loopedSlides) {
     showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
@@ -1951,6 +1952,10 @@ function loopFix(_temp) {
       }
     }
   }
+  swiper.__preventObserver__ = true;
+  requestAnimationFrame(() => {
+    swiper.__preventObserver__ = false;
+  });
   if (isPrev) {
     prependSlidesIndexes.forEach(index => {
       slides[index].swiperLoopMoveDOM = true;
@@ -2348,7 +2353,7 @@ function onTouchMove(event) {
       data.startMoving = true;
     }
   }
-  if (data.isScrolling || swiper.zoom && swiper.params.zoom && swiper.params.zoom.enabled) {
+  if (data.isScrolling) {
     data.isTouched = false;
     return;
   }

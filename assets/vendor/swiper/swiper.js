@@ -1,5 +1,5 @@
 /**
- * Swiper 11.0.0
+ * Swiper 11.0.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: October 24, 2023
+ * Released on: October 26, 2023
  */
 
 var Swiper = (function () {
@@ -2314,7 +2314,8 @@ var Swiper = (function () {
     if (loopedSlides % slidesPerGroup !== 0) {
       loopedSlides += slidesPerGroup - loopedSlides % slidesPerGroup;
     }
-    swiper.loopedSlides = loopedSlides + params.loopAdditionalSlides;
+    loopedSlides += params.loopAdditionalSlides;
+    swiper.loopedSlides = loopedSlides;
     const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
     if (slides.length < slidesPerView + loopedSlides) {
       showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
@@ -2366,6 +2367,10 @@ var Swiper = (function () {
         }
       }
     }
+    swiper.__preventObserver__ = true;
+    requestAnimationFrame(() => {
+      swiper.__preventObserver__ = false;
+    });
     if (isPrev) {
       prependSlidesIndexes.forEach(index => {
         slides[index].swiperLoopMoveDOM = true;
@@ -2763,7 +2768,7 @@ var Swiper = (function () {
         data.startMoving = true;
       }
     }
-    if (data.isScrolling || swiper.zoom && swiper.params.zoom && swiper.params.zoom.enabled) {
+    if (data.isScrolling) {
       data.isTouched = false;
       return;
     }
